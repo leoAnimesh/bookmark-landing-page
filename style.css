@@ -1,0 +1,162 @@
+:root {
+  --soft-blue: hsl(231, 69%, 60%);
+  --soft-red: hsl(0, 94%, 66%);
+  --grayish-Blue: hsl(229, 8%, 60%);
+  --very-Dark-Blue: hsl(229, 31%, 21%);
+  --color-white: #fff;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.8rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* nav styles  */
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 3rem 0;
+}
+
+.hambarger-logo {
+  display: none;
+}
+
+nav img {
+  object-fit: contain;
+  width: 20rem;
+}
+
+nav ul a {
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  margin: 0 2rem;
+  cursor: pointer;
+}
+
+nav ul button {
+  padding: 1rem 3rem;
+  outline: none;
+  border-style: none;
+  background-color: var(--soft-red);
+  color: var(--color-white);
+  text-transform: uppercase;
+  border-radius: 0.5rem;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+nav ul button:hover {
+  background-color: var(--color-white);
+  color: var(--soft-red);
+  border: 2px solid var(--soft-red);
+  box-shadow: 1px 3px 6px var(--grayish-Blue);
+}
+
+@media only screen and (max-width: 600px) {
+  nav {
+    margin: 0;
+    padding: 2rem;
+  }
+
+  .hambarger-logo {
+    display: block;
+    width: 3rem;
+    height: 3rem;
+  }
+
+  nav ul {
+    display: none;
+  }
+}
+
+/* main  */
+
+main {
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+/* hero section  */
+
+.hero-section {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.chrome-btn {
+  padding: 1.5rem 2rem;
+  margin-right: 1rem;
+  border-style: none;
+  background-color: var(--soft-blue);
+  color: var(--color-white);
+  font-weight: 500;
+  border-radius: 1rem;
+  box-shadow: 1px 1px 6px var(--grayish-Blue);
+  transition: 0.2s all ease;
+}
+
+.chrome-btn:hover {
+  box-shadow: 1px 3px 6px var(--grayish-Blue);
+}
+
+.firefox-btn {
+  transition: 0.2s all ease;
+  padding: 1.5rem 2rem;
+  border-style: none;
+  border-radius: 1rem;
+  background-color: var(--color-white);
+  font-weight: 500;
+  box-shadow: 1px 1px 6px var(--grayish-Blue);
+}
+.firefox-btn:hover {
+  box-shadow: 1px 3px 6px var(--grayish-Blue);
+}
+
+.hero-section > img {
+  z-index: 10;
+}
+
+.hero-section .hero-section-info h1 {
+  font-size: 4.8rem;
+  font-weight: 400;
+}
+
+.hero-section .hero-section-info p {
+  opacity: 0.6;
+  width: 35vw;
+  margin: 2rem 0;
+}
+
+.hero-section-img > img {
+  position: relative;
+  right: -38px;
+}
+
+.shape {
+  z-index: -22;
+  position: absolute;
+  bottom: 0;
+  right: -120px;
+  width: 50rem;
+  height: 35rem;
+  background-color: var(--soft-blue);
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
